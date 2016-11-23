@@ -1,0 +1,11 @@
+android {
+	productFlavors {
+		"nativescript-image-cache-media" {
+			dimension "nativescript-image-cache-media"
+		}
+	}
+}
+
+dependencies {
+  compile 'com.squareup.picasso:picasso:2.5.2'
+}

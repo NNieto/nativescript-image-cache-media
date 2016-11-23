@@ -1,0 +1,51 @@
+{
+    "name": "nativescript-image-cache-media",
+    "version": "1.0.1",
+    "description": "A plugin for caching web images on Android and iOS",
+    "main": "imageCacheMedia.js",
+    "typings": "index.d.ts",
+    "nativescript": {
+        "platforms": {
+            "android": "2.0.0",
+            "ios": "2.0.0"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/NNieto/nativescript-image-cache-media.git"
+    },
+    "keywords": [
+        "NativeScript",
+        "nativescript-image-cache-media",
+        "cache",
+        "image",
+        "picasso",
+        "sdwebimage",
+        "android",
+        "iOS",
+        "nativescript",
+        "plugin"
+    ],
+    "author": {
+        "name": "Alejandro Nieto",
+        "email": "alejandro_nb16@hotmail.com"
+    },
+    "license": {
+        "type": "MIT",
+        "url": "https://github.com/NNieto/nativescript-image-cache-media/blob/master/LICENSE"
+    },
+    "bugs": {
+        "url": "https://github.com/NNieto/nativescript-image-cache-media/issues"
+    },
+    "homepage": "https://github.com/NNieto/nativescript-image-cache-media",
+    "readmeFilename": "README.md",
+    "scripts": {
+        "demo.ios": "npm run preparedemo && cd demo && tns emulate ios",
+        "demo.android": "npm run preparedemo && cd demo && tns run android",
+        "debug.ios": "npm run preparedemo && cd demo && tns debug ios --emulator",
+        "debug.android": "npm run preparedemo && cd demo && tns debug android --emulator",
+        "preparedemo": "cd demo && tns plugin remove nativescript-image-cache-media && tns plugin add .. && tns install",
+        "setup": "cd demo && npm install && tns plugin add .. && cd ..",
+        "start": "npm run demo.android"
+    }
+}
