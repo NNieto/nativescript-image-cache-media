@@ -23,7 +23,7 @@ imageCommon.ImageCacheMedia.imageUriProperty.metadata.onSetNativeValue = functio
 
 
 function getRealPath(value) {
-    var fileName = "";
+    var fileName = value;
     if (0 === value.indexOf("~/")) {
         fileName = fs.path.join(fs.knownFolders.currentApp().path, value.replace("~/", ""));
         fileName = "file:" + fileName;
