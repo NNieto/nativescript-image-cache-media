@@ -19,7 +19,7 @@ You can use all the nativescript native image module, just set the imageUri prop
 ```
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:IM="nativescript-image-cache-media">
 	<StackLayout>
-		<IC:ImageCacheMedia placeholder="~/resources/images/placeholder.png" stretch="aspectFill" imageUri="{{ photo_url }}"/>
+		<IM:ImageCacheMedia placeholder="~/resources/images/placeholder.png" stretch="aspectFill" imageUri="{{ photo_url }}"/>
 	</StackLayout>
 </Page>
 ```
