@@ -1,4 +1,4 @@
-# NativeScript-Nativescript-image-cache-media
+# Nativescript-image-cache-media
 A plugin for caching web and local images on Android and iOS
 
 Using Picasso on Android and SDWebImage on iOS is a simple library that uses the nativescript image component and just adding a cache funcionality. Inspired by nativescript-web-image-cache and nativescript-image-cache-it plugins, Feel free to contribuite or suggest changes.
