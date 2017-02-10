@@ -27,12 +27,12 @@ function getRealPath(value) {
     if (0 === value.indexOf("~/")) {
         fileName = fs.path.join(fs.knownFolders.currentApp().path, value.replace("~/", ""));
         fileName = "file:" + fileName;
-    } else if (0 == value.indexOf("res")) {
+    } else if (0 == value.indexOf(utils.RESOURCE_PREFIX)) {
         fileName = value;
         var res = utils.ad.getApplicationContext().getResources();
         var resName = fileName.substr(utils.RESOURCE_PREFIX.length);
         var identifier = res.getIdentifier(resName, 'drawable', utils.ad.getApplication().getPackageName());
-        fileName = "res:/" + identifier;
+        fileName = utils.RESOURCE_PREFIX + identifier;
     } else if (0 === value.indexOf("http")) {
         fileName = value;
     }
@@ -42,8 +42,8 @@ function getRealPath(value) {
 function getImage(image) {
     switch (typeof image) {
         case 'string':
-            if (image && image.indexOf('res://') > -1) {
-                let src = imageSrc.fromResource(image);
+            if (image && 0 == image.indexOf(utils.RESOURCE_PREFIX)) {
+                let src = imageSrc.fromResource(image.substr(utils.RESOURCE_PREFIX.length));
                 var res = utils.ad.getApplicationContext().getResources();
                 return new android.graphics.drawable.BitmapDrawable(res, src.android);
             } else if (image && image.indexOf("~/") === 0) {
