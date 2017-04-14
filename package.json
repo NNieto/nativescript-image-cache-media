@@ -2,7 +2,7 @@
     "name": "nativescript-image-cache-media",
     "version": "1.0.6",
     "description": "A plugin for caching web images on Android and iOS",
-    "main": "imageCacheMedia.js",
+    "main": "imageCacheMedia",
     "typings": "index.d.ts",
     "nativescript": {
         "platforms": {
